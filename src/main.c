@@ -39,7 +39,7 @@ char * get_command(char * input_string){
 /*It will check the command type , whether it is external , internal or nothing*/
 int check_command_type(char * cmd){
     //storing buildin commands
-    char *builtins[] = {"echo", "printf", "read", "cd", "pwd", "pushd", "popd", "dirs", "let", "eval",
+    char *builtins[] = {"echo", "printf", "read", "cd", "pwd", "pushd", "clear" , "popd", "dirs", "let", "eval",
 						"set", "unset", "export", "declare", "typeset", "readonly", "getopts", "source",
 						"exit", "exec", "shopt", "caller", "true", "type", "hash", "bind", "help", NULL};
     int i=0;
