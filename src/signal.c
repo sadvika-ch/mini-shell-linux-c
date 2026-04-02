@@ -87,6 +87,8 @@ void signal_handler(int signum){
         // using -1 to catch any child, WNOHANG to not block
         while ((done = waitpid(-1, &status, WNOHANG)) > 0){
             // find the finished job in the list to print its details
+            //printing the done message is optional we can do or not , bash dont
+            /*
             Slist *tmp = head;
             while (tmp){
                 if (tmp->pid == done){
@@ -97,7 +99,7 @@ void signal_handler(int signum){
                     break;
                 }
                 tmp = tmp->link;
-            }
+            }*/
             // remove the finished job from the list
             delete_last(&head);
         }
